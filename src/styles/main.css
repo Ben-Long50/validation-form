@@ -3,3 +3,62 @@ body {
   height: 100%;
   width: 100%;
 }
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding: 12px;
+  border: solid black 1px;
+  border-radius: 8px;
+}
+
+.input-label {
+  font-size: 20px;
+}
+
+.input-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+#button-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 50px;
+}
+
+input {
+  font-size: 16px;
+  border-color: 5px solid blue;
+  border-radius: 3px;
+  outline: none;
+}
+
+input:invalid {
+  border: solid red 1px;
+}
+
+input:focus:invalid {
+  background-color: rgb(255, 212, 212);
+}
+
+input:valid {
+  border: solid green 1px;
+}
+
+button {
+  font-size: 16px;
+}

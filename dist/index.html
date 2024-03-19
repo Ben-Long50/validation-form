@@ -3,7 +3,39 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Image Slider></title>
+    <title>Validation Form></title>
   <script defer="defer" src="bundle.js"></script></head>
-  <body></body>
+  <body>
+    <form id="form" novalidate>
+      <div class="input-container">
+        <label for="email" class="input-label">Email:</label>
+        <input id="email" name="email" type="email" required>
+        <span class="error"></span>
+      </div>
+      <div class="input-container">
+        <label for="country" class="input-label">Country</label>
+        <input type="text" name="country" id="country" required>
+        <span class="error"></span>
+      </div>
+      <div class="input-container">
+        <label for="zip-code" class="input-label">Zip Code:</label>
+        <input type="number" name="zip-code" id="zip-code" required>
+        <span class="error"></span>
+      </div>
+      <div class="input-container">
+        <label for="password" class="input-label">Password:</label>
+        <input type="password" id="password" name="password" required>
+        <span class="error"></span>
+      </div>
+      <div class="input-container">
+        <label for="password-confirm" class="input-label">Confirm Password:</label>
+        <input type="password" name="password-confirm" id="password-confirm" required>
+        <span class="error"></span>
+      </div>
+      <div id="button-container">
+        <button type="submit">Submit</button>
+        <button type="reset">Reset</button>
+      </div>
+    </form>
+  </body>
 </html>

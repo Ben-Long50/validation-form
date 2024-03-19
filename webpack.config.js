@@ -47,7 +47,7 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      title: 'Image Slider',
+      title: 'Validation Form',
       filename: 'index.html',
       template: 'src/template.html',
       minify: {

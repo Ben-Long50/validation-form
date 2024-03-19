@@ -26,7 +26,66 @@ body {
   height: 100%;
   width: 100%;
 }
-`, "",{"version":3,"sources":["webpack://./src/styles/main.css"],"names":[],"mappings":"AAAA;;EAEE,YAAY;EACZ,WAAW;AACb","sourcesContent":["html,\nbody {\n  height: 100%;\n  width: 100%;\n}\n"],"sourceRoot":""}]);
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding: 12px;
+  border: solid black 1px;
+  border-radius: 8px;
+}
+
+.input-label {
+  font-size: 20px;
+}
+
+.input-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+#button-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 50px;
+}
+
+input {
+  font-size: 16px;
+  border-color: 5px solid blue;
+  border-radius: 3px;
+  outline: none;
+}
+
+input:invalid {
+  border: solid red 1px;
+}
+
+input:focus:invalid {
+  background-color: rgb(255, 212, 212);
+}
+
+input:valid {
+  border: solid green 1px;
+}
+
+button {
+  font-size: 16px;
+}
+`, "",{"version":3,"sources":["webpack://./src/styles/main.css"],"names":[],"mappings":"AAAA;;EAEE,YAAY;EACZ,WAAW;AACb;;AAEA;EACE,aAAa;EACb,uBAAuB;EACvB,mBAAmB;AACrB;;AAEA;EACE,aAAa;EACb,sBAAsB;EACtB,uBAAuB;EACvB,mBAAmB;EACnB,SAAS;EACT,aAAa;EACb,uBAAuB;EACvB,kBAAkB;AACpB;;AAEA;EACE,eAAe;AACjB;;AAEA;EACE,aAAa;EACb,sBAAsB;EACtB,uBAAuB;EACvB,uBAAuB;EACvB,QAAQ;AACV;;AAEA;EACE,aAAa;EACb,8BAA8B;EAC9B,mBAAmB;EACnB,SAAS;AACX;;AAEA;EACE,eAAe;EACf,4BAA4B;EAC5B,kBAAkB;EAClB,aAAa;AACf;;AAEA;EACE,qBAAqB;AACvB;;AAEA;EACE,oCAAoC;AACtC;;AAEA;EACE,uBAAuB;AACzB;;AAEA;EACE,eAAe;AACjB","sourcesContent":["html,\nbody {\n  height: 100%;\n  width: 100%;\n}\n\nbody {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n}\n\n#form {\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  align-items: center;\n  gap: 10px;\n  padding: 12px;\n  border: solid black 1px;\n  border-radius: 8px;\n}\n\n.input-label {\n  font-size: 20px;\n}\n\n.input-container {\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  align-items: flex-start;\n  gap: 8px;\n}\n\n#button-container {\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n  gap: 50px;\n}\n\ninput {\n  font-size: 16px;\n  border-color: 5px solid blue;\n  border-radius: 3px;\n  outline: none;\n}\n\ninput:invalid {\n  border: solid red 1px;\n}\n\ninput:focus:invalid {\n  background-color: rgb(255, 212, 212);\n}\n\ninput:valid {\n  border: solid green 1px;\n}\n\nbutton {\n  font-size: 16px;\n}\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
