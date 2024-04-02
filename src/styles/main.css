@@ -48,28 +48,28 @@ select {
   width: 100%;
   font-size: 16px;
   height: 22px;
-  border-color: 5px solid blue;
+  border: 1px solid black;
   border-radius: 3px;
   outline: none;
 }
 
-input:invalid,
-select:invalid {
-  border: solid red 1px;
+.input-invalid,
+.select-invalid {
+  border: 1px solid red;
 }
 
-input:focus:invalid,
-select:focus:invalid {
+.input-focus-invalid,
+.select-focus-invalid {
   background-color: rgb(255, 212, 212);
 }
 
-input:valid,
-select:valid {
-  border: solid green 1px;
+.input-valid,
+.select-valid {
+  border: 1px solid green;
 }
 
-input:focus:valid,
-select:focus:valid {
+.input-focus-valid,
+.select-focus-valid {
   background-color: rgb(205, 255, 205);
 }
 
