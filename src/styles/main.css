@@ -26,9 +26,10 @@ body {
 }
 
 .input-container {
+  width: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   align-items: flex-start;
   gap: 8px;
 }
@@ -40,23 +41,36 @@ body {
   gap: 50px;
 }
 
-input {
+input,
+select {
+  background-color: white;
+  box-sizing: border-box;
+  width: 100%;
   font-size: 16px;
+  height: 22px;
   border-color: 5px solid blue;
   border-radius: 3px;
   outline: none;
 }
 
-input:invalid {
+input:invalid,
+select:invalid {
   border: solid red 1px;
 }
 
-input:focus:invalid {
+input:focus:invalid,
+select:focus:invalid {
   background-color: rgb(255, 212, 212);
 }
 
-input:valid {
+input:valid,
+select:valid {
   border: solid green 1px;
+}
+
+input:focus:valid,
+select:focus:valid {
+  background-color: rgb(205, 255, 205);
 }
 
 button {
