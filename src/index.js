@@ -53,7 +53,7 @@ function checkCountryValidity() {
 
 let countryCode = '';
 
-zipInput.addEventListener('click', () => {
+zipInput.addEventListener('input', () => {
   Object.entries(countryList).forEach(([key, value]) => {
     if (value === countryInput.value) {
       countryCode = key;
