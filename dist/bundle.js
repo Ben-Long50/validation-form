@@ -4231,6 +4231,8 @@ body {
 }
 
 #form {
+  box-sizing: border-box;
+  max-width: 30%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -4275,7 +4277,7 @@ select {
 
 .input-invalid,
 .select-invalid {
-  border: 1px solid red;
+  border: 1.5px solid red;
 }
 
 .input-focus-invalid,
@@ -4285,7 +4287,7 @@ select {
 
 .input-valid,
 .select-valid {
-  border: 1px solid green;
+  border: 1.5px solid green;
 }
 
 .input-focus-valid,
@@ -4296,7 +4298,12 @@ select {
 button {
   font-size: 16px;
 }
-`, "",{"version":3,"sources":["webpack://./src/styles/main.css"],"names":[],"mappings":"AAAA;;EAEE,YAAY;EACZ,WAAW;AACb;;AAEA;EACE,aAAa;EACb,uBAAuB;EACvB,mBAAmB;AACrB;;AAEA;EACE,aAAa;EACb,sBAAsB;EACtB,uBAAuB;EACvB,mBAAmB;EACnB,SAAS;EACT,aAAa;EACb,uBAAuB;EACvB,kBAAkB;AACpB;;AAEA;EACE,eAAe;AACjB;;AAEA;EACE,WAAW;EACX,aAAa;EACb,sBAAsB;EACtB,8BAA8B;EAC9B,uBAAuB;EACvB,QAAQ;AACV;;AAEA;EACE,aAAa;EACb,8BAA8B;EAC9B,mBAAmB;EACnB,SAAS;AACX;;AAEA;;EAEE,uBAAuB;EACvB,sBAAsB;EACtB,WAAW;EACX,eAAe;EACf,YAAY;EACZ,uBAAuB;EACvB,kBAAkB;EAClB,aAAa;AACf;;AAEA;;EAEE,qBAAqB;AACvB;;AAEA;;EAEE,oCAAoC;AACtC;;AAEA;;EAEE,uBAAuB;AACzB;;AAEA;;EAEE,oCAAoC;AACtC;;AAEA;EACE,eAAe;AACjB","sourcesContent":["html,\nbody {\n  height: 100%;\n  width: 100%;\n}\n\nbody {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n}\n\n#form {\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  align-items: center;\n  gap: 10px;\n  padding: 12px;\n  border: solid black 1px;\n  border-radius: 8px;\n}\n\n.input-label {\n  font-size: 20px;\n}\n\n.input-container {\n  width: 100%;\n  display: flex;\n  flex-direction: column;\n  justify-content: space-between;\n  align-items: flex-start;\n  gap: 8px;\n}\n\n#button-container {\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n  gap: 50px;\n}\n\ninput,\nselect {\n  background-color: white;\n  box-sizing: border-box;\n  width: 100%;\n  font-size: 16px;\n  height: 22px;\n  border: 1px solid black;\n  border-radius: 3px;\n  outline: none;\n}\n\n.input-invalid,\n.select-invalid {\n  border: 1px solid red;\n}\n\n.input-focus-invalid,\n.select-focus-invalid {\n  background-color: rgb(255, 212, 212);\n}\n\n.input-valid,\n.select-valid {\n  border: 1px solid green;\n}\n\n.input-focus-valid,\n.select-focus-valid {\n  background-color: rgb(205, 255, 205);\n}\n\nbutton {\n  font-size: 16px;\n}\n"],"sourceRoot":""}]);
+
+.error {
+  height: auto;
+  overflow-wrap: break-word;
+}
+`, "",{"version":3,"sources":["webpack://./src/styles/main.css"],"names":[],"mappings":"AAAA;;EAEE,YAAY;EACZ,WAAW;AACb;;AAEA;EACE,aAAa;EACb,uBAAuB;EACvB,mBAAmB;AACrB;;AAEA;EACE,sBAAsB;EACtB,cAAc;EACd,aAAa;EACb,sBAAsB;EACtB,uBAAuB;EACvB,mBAAmB;EACnB,SAAS;EACT,aAAa;EACb,uBAAuB;EACvB,kBAAkB;AACpB;;AAEA;EACE,eAAe;AACjB;;AAEA;EACE,WAAW;EACX,aAAa;EACb,sBAAsB;EACtB,8BAA8B;EAC9B,uBAAuB;EACvB,QAAQ;AACV;;AAEA;EACE,aAAa;EACb,8BAA8B;EAC9B,mBAAmB;EACnB,SAAS;AACX;;AAEA;;EAEE,uBAAuB;EACvB,sBAAsB;EACtB,WAAW;EACX,eAAe;EACf,YAAY;EACZ,uBAAuB;EACvB,kBAAkB;EAClB,aAAa;AACf;;AAEA;;EAEE,uBAAuB;AACzB;;AAEA;;EAEE,oCAAoC;AACtC;;AAEA;;EAEE,yBAAyB;AAC3B;;AAEA;;EAEE,oCAAoC;AACtC;;AAEA;EACE,eAAe;AACjB;;AAEA;EACE,YAAY;EACZ,yBAAyB;AAC3B","sourcesContent":["html,\nbody {\n  height: 100%;\n  width: 100%;\n}\n\nbody {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n}\n\n#form {\n  box-sizing: border-box;\n  max-width: 30%;\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  align-items: center;\n  gap: 10px;\n  padding: 12px;\n  border: solid black 1px;\n  border-radius: 8px;\n}\n\n.input-label {\n  font-size: 20px;\n}\n\n.input-container {\n  width: 100%;\n  display: flex;\n  flex-direction: column;\n  justify-content: space-between;\n  align-items: flex-start;\n  gap: 8px;\n}\n\n#button-container {\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n  gap: 50px;\n}\n\ninput,\nselect {\n  background-color: white;\n  box-sizing: border-box;\n  width: 100%;\n  font-size: 16px;\n  height: 22px;\n  border: 1px solid black;\n  border-radius: 3px;\n  outline: none;\n}\n\n.input-invalid,\n.select-invalid {\n  border: 1.5px solid red;\n}\n\n.input-focus-invalid,\n.select-focus-invalid {\n  background-color: rgb(255, 212, 212);\n}\n\n.input-valid,\n.select-valid {\n  border: 1.5px solid green;\n}\n\n.input-focus-valid,\n.select-focus-valid {\n  background-color: rgb(205, 255, 205);\n}\n\nbutton {\n  font-size: 16px;\n}\n\n.error {\n  height: auto;\n  overflow-wrap: break-word;\n}\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -5842,6 +5849,607 @@ module.exports = styleTagTransform;
 
 /***/ }),
 
+/***/ "./node_modules/passcode-validator/src/PasscodeValidator.ts":
+/*!******************************************************************!*\
+  !*** ./node_modules/passcode-validator/src/PasscodeValidator.ts ***!
+  \******************************************************************/
+/***/ ((__unused_webpack_module, exports) => {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+class PasscodeValidator {
+    constructor() {
+        /**
+         * Validates the subject against the rules. To check only if it's valid call {@link isValid}.
+         * @param subject The password/PIN to validate.
+         * @return An object with {@link rules} and the isValid boolean.
+         */
+        this.validate = (subject) => {
+            let isValid = true;
+            this.rules.forEach((r) => {
+                r.validate(subject);
+                if (!r.isCompleted()) {
+                    isValid = false;
+                }
+            });
+            return { rules: [...this.rules], isValid };
+        };
+        /**
+         * Checks if the password/PIN meets all the rules. Make sure you validate the password first calling {@link validate}
+         * @return True if it meets all the rules. Otherwise, false.
+         */
+        this.isValid = () => {
+            return Array.from(this.rules).every((r) => r.isCompleted());
+        };
+        /**
+         * Replaces the current rules.
+         * To add a new rule call {@link addRule}
+         * To remove an existing rule call {@link removeRule}
+         * @param rules The new rules to set.
+         */
+        this.updateRules = (rules) => this.rules = rules;
+        /**
+         * Get the current rules.
+         * @return The rules to validate the password/PIN.
+         */
+        this.getRules = () => [...this.rules];
+        /**
+         * Adds a new rule if it does not exist. Throws an error if the instance was already added.
+         * To replace all the rules call {@link updateRules}
+         * @param rule
+         */
+        this.addRule = (rule) => {
+            Array.from(this.rules).forEach((r) => {
+                const className = r.constructor.name;
+                if (className === rule.constructor.name) {
+                    throw `You cannot set the same rule more than once '${className}'. Use updateRules to update all the rules.`;
+                }
+            });
+            this.rules.add(rule);
+        };
+        /**
+         * Removes an existing rule.
+         * @param rule
+         */
+        this.removeRule = (rule) => this.rules.delete(rule);
+        /**
+         * Sets the completed field of all rules to undefined.
+         */
+        this.resetRules = () => this.rules.forEach((r) => r.reset());
+        this.rules = new Set();
+    }
+}
+exports["default"] = PasscodeValidator;
+
+
+/***/ }),
+
+/***/ "./node_modules/passcode-validator/src/Validator.ts":
+/*!**********************************************************!*\
+  !*** ./node_modules/passcode-validator/src/Validator.ts ***!
+  \**********************************************************/
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+const DigitRule_1 = __webpack_require__(/*! ./rules/DigitRule */ "./node_modules/passcode-validator/src/rules/DigitRule.ts");
+const ForbiddenText_1 = __webpack_require__(/*! ./rules/ForbiddenText */ "./node_modules/passcode-validator/src/rules/ForbiddenText.ts");
+const LengthRule_1 = __webpack_require__(/*! ./rules/LengthRule */ "./node_modules/passcode-validator/src/rules/LengthRule.ts");
+const LowerCaseRule_1 = __webpack_require__(/*! ./rules/LowerCaseRule */ "./node_modules/passcode-validator/src/rules/LowerCaseRule.ts");
+const MaxRepeatedInRowRule_1 = __webpack_require__(/*! ./rules/MaxRepeatedInRowRule */ "./node_modules/passcode-validator/src/rules/MaxRepeatedInRowRule.ts");
+const NoDigitRule_1 = __webpack_require__(/*! ./rules/NoDigitRule */ "./node_modules/passcode-validator/src/rules/NoDigitRule.ts");
+const NoLowerCaseRule_1 = __webpack_require__(/*! ./rules/NoLowerCaseRule */ "./node_modules/passcode-validator/src/rules/NoLowerCaseRule.ts");
+const NoSpecialCharRule_1 = __webpack_require__(/*! ./rules/NoSpecialCharRule */ "./node_modules/passcode-validator/src/rules/NoSpecialCharRule.ts");
+const NoUpperCaseRule_1 = __webpack_require__(/*! ./rules/NoUpperCaseRule */ "./node_modules/passcode-validator/src/rules/NoUpperCaseRule.ts");
+const PINRule_1 = __webpack_require__(/*! ./rules/PINRule */ "./node_modules/passcode-validator/src/rules/PINRule.ts");
+const PasscodeValidator_1 = __webpack_require__(/*! ./PasscodeValidator */ "./node_modules/passcode-validator/src/PasscodeValidator.ts");
+const SpecialCharRule_1 = __webpack_require__(/*! ./rules/SpecialCharRule */ "./node_modules/passcode-validator/src/rules/SpecialCharRule.ts");
+const UpperCaseRule_1 = __webpack_require__(/*! ./rules/UpperCaseRule */ "./node_modules/passcode-validator/src/rules/UpperCaseRule.ts");
+// Class that implements the builder pattern. I avoid to name it ValidatorBuilder to make it cleaner for consume.
+class Validator {
+    constructor() {
+        this.upperCase = (message) => {
+            this.validator.addRule(new UpperCaseRule_1.default(message));
+            return this;
+        };
+        this.noUpperCase = (message) => {
+            this.validator.addRule(new NoUpperCaseRule_1.default(message));
+            return this;
+        };
+        this.lowerCase = (message) => {
+            this.validator.addRule(new LowerCaseRule_1.default(message));
+            return this;
+        };
+        this.noLowerCase = (message) => {
+            this.validator.addRule(new NoLowerCaseRule_1.default(message));
+            return this;
+        };
+        this.length = (min, max, message) => {
+            this.validator.addRule(new LengthRule_1.default(min, max, message));
+            return this;
+        };
+        this.numeric = (message) => {
+            this.validator.addRule(new PINRule_1.default(message));
+            return this;
+        };
+        this.digit = (count = 1, message) => {
+            this.validator.addRule(new DigitRule_1.default(count, message));
+            return this;
+        };
+        this.noDigit = (message) => {
+            this.validator.addRule(new NoDigitRule_1.default(message));
+            return this;
+        };
+        this.specialChar = (message) => {
+            this.validator.addRule(new SpecialCharRule_1.default(message));
+            return this;
+        };
+        this.noSpecialChar = (message) => {
+            this.validator.addRule(new NoSpecialCharRule_1.default(message));
+            return this;
+        };
+        this.forbidden = (texts, message) => {
+            this.validator.addRule(new ForbiddenText_1.default(texts, message));
+            return this;
+        };
+        this.maxRepeated = (count, ignoreCase = false, message) => {
+            this.validator.addRule(new MaxRepeatedInRowRule_1.default(count, ignoreCase, message));
+            return this;
+        };
+        this.build = () => this.validator;
+        this.validator = new PasscodeValidator_1.default();
+    }
+}
+exports["default"] = Validator;
+
+
+/***/ }),
+
+/***/ "./node_modules/passcode-validator/src/errors/RuleError.ts":
+/*!*****************************************************************!*\
+  !*** ./node_modules/passcode-validator/src/errors/RuleError.ts ***!
+  \*****************************************************************/
+/***/ ((__unused_webpack_module, exports) => {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+var RuleError;
+(function (RuleError) {
+    RuleError["POSITIVE_VALUE_REQUIRED"] = "The values cannot be smaller or equal to zero.";
+    RuleError["MAX_LENGTH_GREATER"] = "If maxLength is received, it must be greater or equal to minLength.";
+})(RuleError || (RuleError = {}));
+exports["default"] = RuleError;
+
+
+/***/ }),
+
+/***/ "./node_modules/passcode-validator/src/index.ts":
+/*!******************************************************!*\
+  !*** ./node_modules/passcode-validator/src/index.ts ***!
+  \******************************************************/
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+const Validator_1 = __webpack_require__(/*! ./Validator */ "./node_modules/passcode-validator/src/Validator.ts");
+exports["default"] = Validator_1.default;
+
+
+/***/ }),
+
+/***/ "./node_modules/passcode-validator/src/rules/DigitRule.ts":
+/*!****************************************************************!*\
+  !*** ./node_modules/passcode-validator/src/rules/DigitRule.ts ***!
+  \****************************************************************/
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+const Rule_1 = __webpack_require__(/*! ./base/Rule */ "./node_modules/passcode-validator/src/rules/base/Rule.ts");
+const RuleError_1 = __webpack_require__(/*! ../errors/RuleError */ "./node_modules/passcode-validator/src/errors/RuleError.ts");
+/**
+ * Rule to require X digits. Where X is the count param from the constructor.
+ */
+class DigitRule extends Rule_1.default {
+    constructor(count = 1, message) {
+        super(message);
+        this.digitRegex = /[^0-9]/g;
+        if (count < 1)
+            throw RuleError_1.default.POSITIVE_VALUE_REQUIRED;
+        this.digitsCount = count;
+    }
+    validate(subject) {
+        this.completed = subject.replace(this.digitRegex, '').length >= this.digitsCount;
+    }
+}
+exports["default"] = DigitRule;
+
+
+/***/ }),
+
+/***/ "./node_modules/passcode-validator/src/rules/ForbiddenText.ts":
+/*!********************************************************************!*\
+  !*** ./node_modules/passcode-validator/src/rules/ForbiddenText.ts ***!
+  \********************************************************************/
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+const Rule_1 = __webpack_require__(/*! ./base/Rule */ "./node_modules/passcode-validator/src/rules/base/Rule.ts");
+/**
+ * Rule to forbid some strings. For instance, the username.
+ */
+class ForbiddenText extends Rule_1.default {
+    constructor(texts, message) {
+        super(message);
+        this.texts = texts;
+    }
+    validate(subject) {
+        const subjectLowerCased = subject.toLowerCase();
+        this.completed = this.texts.every(value => !subjectLowerCased.includes(value.toLowerCase()));
+    }
+}
+exports["default"] = ForbiddenText;
+
+
+/***/ }),
+
+/***/ "./node_modules/passcode-validator/src/rules/LengthRule.ts":
+/*!*****************************************************************!*\
+  !*** ./node_modules/passcode-validator/src/rules/LengthRule.ts ***!
+  \*****************************************************************/
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+const Rule_1 = __webpack_require__(/*! ./base/Rule */ "./node_modules/passcode-validator/src/rules/base/Rule.ts");
+const RuleError_1 = __webpack_require__(/*! ../errors/RuleError */ "./node_modules/passcode-validator/src/errors/RuleError.ts");
+/**
+ * Rule to require a specific length or range.
+ */
+class LengthRule extends Rule_1.default {
+    /**
+     * @param minLength The minimum required length.
+     * @param maxLength The maximum required length. If it's undefined, max will get the value of minLength, so the password/PIN will have a required length instead of a range.
+     * @param message The message to display for the rule. For example "Must have a special character".
+     */
+    constructor(minLength, maxLength, message) {
+        super(message);
+        if (minLength <= 0 || maxLength === 0) {
+            throw RuleError_1.default.POSITIVE_VALUE_REQUIRED;
+        }
+        else if (maxLength && (maxLength < minLength)) {
+            throw RuleError_1.default.MAX_LENGTH_GREATER;
+        }
+        else {
+            this.minLength = minLength;
+            this.maxLength = maxLength !== null && maxLength !== void 0 ? maxLength : minLength;
+        }
+    }
+    validate(subject) {
+        this.completed = subject.length >= this.minLength && subject.length <= this.maxLength;
+    }
+}
+exports["default"] = LengthRule;
+
+
+/***/ }),
+
+/***/ "./node_modules/passcode-validator/src/rules/LowerCaseRule.ts":
+/*!********************************************************************!*\
+  !*** ./node_modules/passcode-validator/src/rules/LowerCaseRule.ts ***!
+  \********************************************************************/
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+const Rule_1 = __webpack_require__(/*! ./base/Rule */ "./node_modules/passcode-validator/src/rules/base/Rule.ts");
+/**
+ * Rule to require lowercase characters.
+ */
+class LowerCaseRule extends Rule_1.default {
+    /**
+     * @param message The message to display for the rule. For example "Must have a special character".
+     */
+    constructor(message) {
+        super(message);
+        this.lowerCaseRegex = /[a-z]/;
+    }
+    validate(subject) {
+        this.completed = this.lowerCaseRegex.test(subject);
+    }
+}
+exports["default"] = LowerCaseRule;
+
+
+/***/ }),
+
+/***/ "./node_modules/passcode-validator/src/rules/MaxRepeatedInRowRule.ts":
+/*!***************************************************************************!*\
+  !*** ./node_modules/passcode-validator/src/rules/MaxRepeatedInRowRule.ts ***!
+  \***************************************************************************/
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+const Rule_1 = __webpack_require__(/*! ./base/Rule */ "./node_modules/passcode-validator/src/rules/base/Rule.ts");
+/**
+ * Validates the maximum number of times any character can appear in the password consecutively.
+ */
+class MaxRepeatedInRowRule extends Rule_1.default {
+    /**
+     * If
+     * @param count Maximum number of times any character can appear in the password consecutively
+     * @param ignoreCase If true the rule will compare the characters without having into account the case differences. False by default.
+     * @param message The message to display for the rule. For example "Must have a special character".
+     */
+    constructor(count, ignoreCase = false, message) {
+        super(message);
+        this.repeatedCharsInRowRegex = /(.)\1*/g;
+        this.totalCharsInRowAllowed = count;
+        this.ignoreCase = ignoreCase;
+    }
+    validate(subject) {
+        var _a;
+        this.completed = (_a = (this.ignoreCase ? subject : subject.toLowerCase())
+            .match(this.repeatedCharsInRowRegex)) === null || _a === void 0 ? void 0 : _a.every((group) => group.length <= this.totalCharsInRowAllowed);
+    }
+}
+exports["default"] = MaxRepeatedInRowRule;
+
+
+/***/ }),
+
+/***/ "./node_modules/passcode-validator/src/rules/NoDigitRule.ts":
+/*!******************************************************************!*\
+  !*** ./node_modules/passcode-validator/src/rules/NoDigitRule.ts ***!
+  \******************************************************************/
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+const DigitRule_1 = __webpack_require__(/*! ./DigitRule */ "./node_modules/passcode-validator/src/rules/DigitRule.ts");
+/**
+ * Rule to forbid digits.
+ */
+class NoDigitRule extends DigitRule_1.default {
+    constructor(message) {
+        super(1, message);
+    }
+    validate(subject) {
+        super.validate(subject);
+        this.completed = !this.completed;
+    }
+}
+exports["default"] = NoDigitRule;
+
+
+/***/ }),
+
+/***/ "./node_modules/passcode-validator/src/rules/NoLowerCaseRule.ts":
+/*!**********************************************************************!*\
+  !*** ./node_modules/passcode-validator/src/rules/NoLowerCaseRule.ts ***!
+  \**********************************************************************/
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+const LowerCaseRule_1 = __webpack_require__(/*! ./LowerCaseRule */ "./node_modules/passcode-validator/src/rules/LowerCaseRule.ts");
+/**
+ * Rule to forbid lowercase characters.
+ */
+class NoLowerCaseRule extends LowerCaseRule_1.default {
+    constructor(message) {
+        super(message);
+    }
+    validate(subject) {
+        super.validate(subject);
+        this.completed = !this.completed;
+    }
+}
+exports["default"] = NoLowerCaseRule;
+
+
+/***/ }),
+
+/***/ "./node_modules/passcode-validator/src/rules/NoSpecialCharRule.ts":
+/*!************************************************************************!*\
+  !*** ./node_modules/passcode-validator/src/rules/NoSpecialCharRule.ts ***!
+  \************************************************************************/
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+const SpecialCharRule_1 = __webpack_require__(/*! ./SpecialCharRule */ "./node_modules/passcode-validator/src/rules/SpecialCharRule.ts");
+/**
+ * Rule to forbid special characters.
+ */
+class NoSpecialCharRule extends SpecialCharRule_1.default {
+    constructor(message) {
+        super(message);
+    }
+    validate(subject) {
+        super.validate(subject);
+        this.completed = !this.completed;
+    }
+}
+exports["default"] = NoSpecialCharRule;
+
+
+/***/ }),
+
+/***/ "./node_modules/passcode-validator/src/rules/NoUpperCaseRule.ts":
+/*!**********************************************************************!*\
+  !*** ./node_modules/passcode-validator/src/rules/NoUpperCaseRule.ts ***!
+  \**********************************************************************/
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+const UpperCaseRule_1 = __webpack_require__(/*! ./UpperCaseRule */ "./node_modules/passcode-validator/src/rules/UpperCaseRule.ts");
+/**
+ * Rule to forbid uppercase characters.
+ */
+class NoUpperCaseRule extends UpperCaseRule_1.default {
+    constructor(message) {
+        super(message);
+    }
+    validate(subject) {
+        super.validate(subject);
+        this.completed = !this.completed;
+    }
+}
+exports["default"] = NoUpperCaseRule;
+
+
+/***/ }),
+
+/***/ "./node_modules/passcode-validator/src/rules/PINRule.ts":
+/*!**************************************************************!*\
+  !*** ./node_modules/passcode-validator/src/rules/PINRule.ts ***!
+  \**************************************************************/
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+const Rule_1 = __webpack_require__(/*! ./base/Rule */ "./node_modules/passcode-validator/src/rules/base/Rule.ts");
+/**
+ * Rule to allow only digits.
+ */
+class PINRule extends Rule_1.default {
+    /**
+     * @param message The message to display for the rule. For example "Must have a special character".
+     */
+    constructor(message) {
+        super(message);
+        this.onlyDigitsPattern = /^\d+$/;
+    }
+    validate(subject) {
+        this.completed = this.onlyDigitsPattern.test(subject);
+    }
+}
+exports["default"] = PINRule;
+
+
+/***/ }),
+
+/***/ "./node_modules/passcode-validator/src/rules/SpecialCharRule.ts":
+/*!**********************************************************************!*\
+  !*** ./node_modules/passcode-validator/src/rules/SpecialCharRule.ts ***!
+  \**********************************************************************/
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+const Rule_1 = __webpack_require__(/*! ./base/Rule */ "./node_modules/passcode-validator/src/rules/base/Rule.ts");
+/**
+ * Rule to require a special character.
+ */
+class SpecialCharRule extends Rule_1.default {
+    /**
+     * @param message The message to display for the rule. For example "Must have a special character".
+     */
+    constructor(message) {
+        super(message);
+        this.specialCharRegex = new RegExp(/[^A-Za-z0-9]/g);
+    }
+    validate(subject) {
+        this.completed = this.specialCharRegex.test(subject);
+    }
+}
+exports["default"] = SpecialCharRule;
+
+
+/***/ }),
+
+/***/ "./node_modules/passcode-validator/src/rules/UpperCaseRule.ts":
+/*!********************************************************************!*\
+  !*** ./node_modules/passcode-validator/src/rules/UpperCaseRule.ts ***!
+  \********************************************************************/
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+const Rule_1 = __webpack_require__(/*! ./base/Rule */ "./node_modules/passcode-validator/src/rules/base/Rule.ts");
+/**
+ * Rule to require uppercase characters.
+ */
+class UpperCaseRule extends Rule_1.default {
+    /**
+     * @param message The message to display for the rule. For example "Must have a special character".
+     */
+    constructor(message) {
+        super(message);
+        this.upperCaseRegex = /[A-Z]/;
+    }
+    validate(subject) {
+        this.completed = this.upperCaseRegex.test(subject);
+    }
+}
+exports["default"] = UpperCaseRule;
+
+
+/***/ }),
+
+/***/ "./node_modules/passcode-validator/src/rules/base/Rule.ts":
+/*!****************************************************************!*\
+  !*** ./node_modules/passcode-validator/src/rules/base/Rule.ts ***!
+  \****************************************************************/
+/***/ ((__unused_webpack_module, exports) => {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+/**
+ * Base rule. The rest of the rules must extend from this class.
+ */
+class Rule {
+    /**
+     * @param message The message to display for the rule. For example "Must have a special character".
+     */
+    constructor(message) {
+        /**
+         * Returns the completed value.
+         * true if the password/PIN meets the rule.
+         * false if the password/PIN doesn't meet the rule
+         * undefined if the rules was not validated yet, or if {@link reset} was called.
+         */
+        this.isCompleted = () => this.completed;
+        /**
+         * Sets the completed field to undefined. This is the same as if {@link validate} hadn't been called yet.
+         */
+        this.reset = () => this.completed = undefined;
+        this.name = this.constructor.name;
+        this.message = message;
+    }
+    /**
+     * Returns the message (if exists) passed in the constructor when creating the rule.
+     */
+    getMessage() {
+        return this.message;
+    }
+}
+exports["default"] = Rule;
+
+
+/***/ }),
+
 /***/ "./node_modules/util/node_modules/inherits/inherits_browser.js":
 /*!*********************************************************************!*\
   !*** ./node_modules/util/node_modules/inherits/inherits_browser.js ***!
@@ -7311,6 +7919,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var country_codes_list__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(country_codes_list__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var postal_codes_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! postal-codes-js */ "./node_modules/postal-codes-js/postal-codes.js");
 /* harmony import */ var email_validator__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! email-validator */ "./node_modules/email-validator/index.js");
+/* harmony import */ var passcode_validator__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! passcode-validator */ "./node_modules/passcode-validator/src/index.ts");
 function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
 function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
 function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
@@ -7322,10 +7931,16 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 
 
+
+var email = document.querySelector('#email');
 var countryList = country_codes_list__WEBPACK_IMPORTED_MODULE_2___default().customList('countryCode', '{countryNameEn}');
 var countryNames = Object.values(countryList);
 var inputs = document.querySelectorAll('input');
 var countryInput = document.querySelector('#country');
+var zipInput = document.querySelector('#zip-code');
+var password = document.querySelector('#password');
+var passwordConfirm = document.querySelector('#password-confirm');
+var resetButton = document.querySelector('button[type="reset"]');
 function populateCountryOptions() {
   countryNames.forEach(function (element) {
     var optionElement = document.createElement('option');
@@ -7334,7 +7949,30 @@ function populateCountryOptions() {
   });
 }
 populateCountryOptions();
-var zipInput = document.querySelector('#zip-code');
+function checkEmailValidity() {
+  var emailInput = email.value;
+  var emailValidity = email_validator__WEBPACK_IMPORTED_MODULE_4__.validate(emailInput);
+  var errorMessage = email.parentNode.querySelector('.error');
+  if (emailValidity === false) {
+    email.classList.remove('input-valid', 'input-focus-valid');
+    email.classList.add('input-invalid', 'input-focus-invalid');
+    errorMessage.textContent = 'Enter a valid email';
+  } else {
+    email.classList.remove('input-invalid', 'input-focus-invalid');
+    email.classList.add('input-valid', 'input-focus-valid');
+    errorMessage.textContent = '';
+  }
+}
+function checkCountryValidity() {
+  var countryValue = countryInput.value;
+  if (typeof countryValue === 'string' && countryValue.length !== 0) {
+    countryInput.classList.remove('input-invalid', 'input-focus-invalid');
+    countryInput.classList.add('input-valid', 'input-focus-valid');
+  } else {
+    countryInput.classList.remove('input-valid', 'input-focus-valid');
+    countryInput.classList.add('input-invalid', 'input-focus-invalid');
+  }
+}
 var countryCode = '';
 zipInput.addEventListener('click', function () {
   Object.entries(countryList).forEach(function (_ref) {
@@ -7348,22 +7986,81 @@ zipInput.addEventListener('click', function () {
 });
 function checkZipValidity() {
   var postalValidity = postal_codes_js__WEBPACK_IMPORTED_MODULE_3__.validate(countryCode, zipInput.value);
+  var errorMessage = zipInput.parentNode.querySelector('.error');
   if (typeof postalValidity === 'string') {
     zipInput.classList.remove('input-valid', 'input-focus-valid');
     zipInput.classList.add('input-invalid', 'input-focus-invalid');
+    errorMessage.textContent = postalValidity;
   } else {
     zipInput.classList.remove('input-invalid', 'input-focus-invalid');
     zipInput.classList.add('input-valid', 'input-focus-valid');
+    errorMessage.textContent = '';
   }
 }
-function removeFocusClasses(input) {
-  input.classList.remove('input-focus-valid', 'input-focus-invalid');
+var passValidator = new passcode_validator__WEBPACK_IMPORTED_MODULE_5__["default"]().length(8, 30).upperCase().lowerCase().specialChar().build();
+function checkPasswordValidity() {
+  var passwordInput = password.value;
+  var errorMessage = password.parentNode.querySelector('.error');
+  var _passValidator$valida = passValidator.validate(passwordInput),
+    rules = _passValidator$valida.rules,
+    isValid = _passValidator$valida.isValid;
+  var uncompletedRules = rules.map(function (rule) {
+    return !rule.isCompleted();
+  });
+  console.log(uncompletedRules);
+  if (isValid === false) {
+    password.classList.remove('input-valid', 'input-focus-valid');
+    password.classList.add('input-invalid', 'input-focus-invalid');
+    errorMessage.textContent = 'Your password must be between 8-30 characters and contain one uppercase, one lowercase and one special symbol';
+  } else {
+    password.classList.remove('input-invalid', 'input-focus-invalid');
+    password.classList.add('input-valid', 'input-focus-valid');
+    errorMessage.textContent = '';
+  }
+}
+function checkPasswordConfirm() {
+  var firstPassword = password.value;
+  var secondPassword = passwordConfirm.value;
+  var errorMessage = passwordConfirm.parentNode.querySelector('.error');
+  if (firstPassword !== secondPassword) {
+    passwordConfirm.classList.remove('input-valid', 'input-focus-valid');
+    passwordConfirm.classList.add('input-invalid', 'input-focus-invalid');
+    errorMessage.textContent = 'Your passwords do not match';
+  } else {
+    passwordConfirm.classList.remove('input-invalid', 'input-focus-invalid');
+    passwordConfirm.classList.add('input-valid', 'input-focus-valid');
+    errorMessage.textContent = '';
+  }
 }
 inputs.forEach(function (input) {
-  input.addEventListener('blur', removeFocusClasses(input));
+  input.addEventListener('blur', function () {
+    input.classList.remove('input-focus-valid', 'input-focus-invalid');
+  });
 });
-zipInput.addEventListener('input', checkZipValidity());
-zipInput.addEventListener('focus', checkZipValidity());
+countryInput.addEventListener('blur', function () {
+  countryInput.classList.remove('input-focus-valid', 'input-focus-invalid');
+});
+email.addEventListener('input', checkEmailValidity);
+email.addEventListener('focus', checkEmailValidity);
+countryInput.addEventListener('input', checkCountryValidity);
+countryInput.addEventListener('focus', checkCountryValidity);
+zipInput.addEventListener('input', checkZipValidity);
+zipInput.addEventListener('focus', checkZipValidity);
+password.addEventListener('input', checkPasswordValidity);
+password.addEventListener('focus', checkPasswordValidity);
+passwordConfirm.addEventListener('input', checkPasswordConfirm);
+passwordConfirm.addEventListener('focus', checkPasswordConfirm);
+resetButton.addEventListener('click', function () {
+  email.classList.remove('input-valid', 'input-invalid');
+  countryInput.classList.remove('input-valid', 'input-invalid');
+  zipInput.classList.remove('input-valid', 'input-invalid');
+  password.classList.remove('input-valid', 'input-invalid');
+  passwordConfirm.classList.remove('input-valid', 'input-invalid');
+  var errorMessages = document.querySelectorAll('.error');
+  errorMessages.forEach(function (message) {
+    message.textContent = '';
+  });
+});
 })();
 
 /******/ })()

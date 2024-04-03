@@ -11,6 +11,8 @@ body {
 }
 
 #form {
+  box-sizing: border-box;
+  max-width: 30%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -79,4 +81,5 @@ button {
 
 .error {
   height: auto;
+  overflow-wrap: break-word;
 }

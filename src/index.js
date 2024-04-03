@@ -3,6 +3,7 @@ import './styles/reset-css.css';
 import countryCodes from 'country-codes-list';
 import postalCodes from 'postal-codes-js';
 import emailValidator from 'email-validator';
+import Validator from 'passcode-validator';
 
 const email = document.querySelector('#email');
 const countryList = countryCodes.customList('countryCode', '{countryNameEn}');
@@ -74,6 +75,46 @@ function checkZipValidity() {
   }
 }
 
+const passValidator = new Validator()
+  .length(8, 30)
+  .upperCase()
+  .lowerCase()
+  .specialChar()
+  .build();
+
+function checkPasswordValidity() {
+  const passwordInput = password.value;
+  const errorMessage = password.parentNode.querySelector('.error');
+  const { rules, isValid } = passValidator.validate(passwordInput);
+  const uncompletedRules = rules.map((rule) => !rule.isCompleted());
+  console.log(uncompletedRules);
+  if (isValid === false) {
+    password.classList.remove('input-valid', 'input-focus-valid');
+    password.classList.add('input-invalid', 'input-focus-invalid');
+    errorMessage.textContent =
+      'Your password must be between 8-30 characters and contain one uppercase, one lowercase and one special symbol';
+  } else {
+    password.classList.remove('input-invalid', 'input-focus-invalid');
+    password.classList.add('input-valid', 'input-focus-valid');
+    errorMessage.textContent = '';
+  }
+}
+
+function checkPasswordConfirm() {
+  const firstPassword = password.value;
+  const secondPassword = passwordConfirm.value;
+  const errorMessage = passwordConfirm.parentNode.querySelector('.error');
+  if (firstPassword !== secondPassword) {
+    passwordConfirm.classList.remove('input-valid', 'input-focus-valid');
+    passwordConfirm.classList.add('input-invalid', 'input-focus-invalid');
+    errorMessage.textContent = 'Your passwords do not match';
+  } else {
+    passwordConfirm.classList.remove('input-invalid', 'input-focus-invalid');
+    passwordConfirm.classList.add('input-valid', 'input-focus-valid');
+    errorMessage.textContent = '';
+  }
+}
+
 inputs.forEach((input) => {
   input.addEventListener('blur', () => {
     input.classList.remove('input-focus-valid', 'input-focus-invalid');
@@ -90,6 +131,10 @@ countryInput.addEventListener('input', checkCountryValidity);
 countryInput.addEventListener('focus', checkCountryValidity);
 zipInput.addEventListener('input', checkZipValidity);
 zipInput.addEventListener('focus', checkZipValidity);
+password.addEventListener('input', checkPasswordValidity);
+password.addEventListener('focus', checkPasswordValidity);
+passwordConfirm.addEventListener('input', checkPasswordConfirm);
+passwordConfirm.addEventListener('focus', checkPasswordConfirm);
 
 resetButton.addEventListener('click', () => {
   email.classList.remove('input-valid', 'input-invalid');

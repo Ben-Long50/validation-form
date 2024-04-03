@@ -40,10 +40,23 @@ module.exports = {
         },
       },
       {
+        test: /\.tsx?$/,
+        // exclude: /node_modules/,
+        use: {
+          loader: 'ts-loader',
+          options: {
+            allowTsInNodeModules: true,
+          },
+        },
+      },
+      {
         test: /\.(png|svg|jpg|jpeg|gif|ttf|otf)$/i,
         type: 'asset/resource',
       },
     ],
+  },
+  resolve: {
+    extensions: ['.tsx', '.ts', '.js'],
   },
   plugins: [
     new HtmlWebpackPlugin({
