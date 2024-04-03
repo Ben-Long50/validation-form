@@ -76,3 +76,7 @@ select {
 button {
   font-size: 16px;
 }
+
+.error {
+  height: auto;
+}
