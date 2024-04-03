@@ -79,7 +79,7 @@ const passValidator = new Validator()
   .length(8, 30)
   .upperCase()
   .lowerCase()
-  .specialChar()
+  // .specialChar()
   .build();
 
 function checkPasswordValidity() {
@@ -88,6 +88,7 @@ function checkPasswordValidity() {
   const { rules, isValid } = passValidator.validate(passwordInput);
   const uncompletedRules = rules.map((rule) => !rule.isCompleted());
   console.log(uncompletedRules);
+  console.log(isValid);
   if (isValid === false) {
     password.classList.remove('input-valid', 'input-focus-valid');
     password.classList.add('input-invalid', 'input-focus-invalid');
