@@ -4,6 +4,7 @@ import countryCodes from 'country-codes-list';
 import postalCodes from 'postal-codes-js';
 import emailValidator from 'email-validator';
 
+const email = document.querySelector('#email');
 const countryList = countryCodes.customList('countryCode', '{countryNameEn}');
 const countryNames = Object.values(countryList);
 const inputs = document.querySelectorAll('input');
@@ -19,6 +20,18 @@ function populateCountryOptions() {
 }
 
 populateCountryOptions();
+
+function checkEmailValidity() {
+  const emailInput = email.value;
+  const emailValidity = emailValidator.validate(emailInput);
+  if (emailValidity === false) {
+    email.classList.remove('input-valid', 'input-focus-valid');
+    email.classList.add('input-invalid', 'input-focus-invalid');
+  } else {
+    email.classList.remove('input-invalid', 'input-focus-invalid');
+    email.classList.add('input-valid', 'input-focus-valid');
+  }
+}
 
 const zipInput = document.querySelector('#zip-code');
 let countryCode = '';
@@ -48,5 +61,7 @@ inputs.forEach((input) => {
   });
 });
 
+email.addEventListener('input', checkEmailValidity);
+email.addEventListener('focus', checkEmailValidity);
 zipInput.addEventListener('input', checkZipValidity);
 zipInput.addEventListener('focus', checkZipValidity);

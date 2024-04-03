@@ -55,7 +55,7 @@ select {
 
 .input-invalid,
 .select-invalid {
-  border: 1px solid red;
+  border: 1.5px solid red;
 }
 
 .input-focus-invalid,
@@ -65,7 +65,7 @@ select {
 
 .input-valid,
 .select-valid {
-  border: 1px solid green;
+  border: 1.5px solid green;
 }
 
 .input-focus-valid,
